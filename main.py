@@ -11,7 +11,7 @@ sslify = SSLify(app)
 TOKEN = os.environ['TOKEN']
 API_URL = f'https://api.telegram.org/bot{TOKEN}/'
 
-@app.route(f'/{TOKEN}', methods=['GET', 'POST'])
+@app.route('/', methods=['GET', 'POST'])
 def index():
   if request.method == 'POST':
     r = request.get_json()
